@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Exercise timer</title>  
+
+</head>  
+
+<body>
+
+  <div class="page-wrapper">
+
+    <div class="container" id="instructions-container">
+      <h1>Exercise Timer</h1>
+      <span class="instructions">How many work seconds/rest seconds/sets do you want to do?</span>
+      <span class="example">(format: <strong>work/rest/sets</strong> e.g. <code>30/10/5</code> means 30 seconds’ work and 10 seconds’ rest, times 5 sets.)</span>
+    </div>
+
+    <div class="container" id="input-container">
+      <input type="text" id="input-field" placeholder="30/10/5" autofocus>
+<!-- 
+      <label for="work-field">Work</label>
+      <input type="text" id="work-field" value="5">
+      <label for="rest-field">Rest</label>
+      <input type="text" id="rest-field" value="3">
+      <label for="sets-field">Sets</label>
+      <input type="text" id="sets-field" value="10"> -->
+      <button id="go-button">Go</button>
+    </div>
+    <div id="timer-container">
+      <span id="time-display"></span>
+      <span id="set-display"></span>
+    </div>
+    <span id="escape-instructions">Press <code>ESC</code> to cancel.</span>
+
+  </div>
+
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>                   

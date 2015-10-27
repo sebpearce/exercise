@@ -1,0 +1,129 @@
+@import "normalize";
+
+$main-color: #4373AD;
+$main-grey: hsla(0,0%,0%,0.2);
+$text-color: hsla(0,0%,0%,0.8);
+$heading-color: lighten($main-color, 30%);
+
+$button-bgcolor: white;
+$button-border-color: $main-color;
+$button-hover-textcolor: $button-bgcolor;
+$button-hover-bgcolor: $button-border-color;
+
+$input-border-color: $main-grey;
+$input-hover-border-color: $button-border-color;
+
+body {
+  font-family: 'Open Sans';
+  color: $text-color; 
+}
+
+h1 {
+  font-size: 3rem;
+  color: $heading-color;
+}
+
+code {
+  font-family: 'Monaco', 'Courier', monospace;
+  background: hsla(0,0%,0%,0.1);
+  padding: 0 4px;
+  color: hsla(0,0%,0%,0.6);
+}
+
+.page-wrapper {
+  padding: 50px;
+}
+
+#timer-container {
+  display: block;
+  text-align: center;
+  -webkit-transform: translateY(15%);
+  -ms-transform: translateY(15%);
+  transform: translateY(15%);
+}
+
+#time-display {
+  display: block;
+  margin-bottom: 50px;
+  font-size: 40vh;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  // background: #eee;
+  line-height: 100%;
+}
+
+#set-display {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+
+.instructions {
+  display: block;
+  padding-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+.example {
+  display: block;
+  padding-bottom: 2em;
+  font-size: 1rem;
+  color: $main-color;
+
+}
+
+#input-field,
+#go-button {
+  border-radius: 5px;
+}
+
+#input-field {
+  width: 150px;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid $input-border-color;
+  font-size: 1.5rem;
+
+  &:hover, &:focus {
+    border-color: $input-hover-border-color;
+  }
+}
+
+#go-button {
+  margin-left: 5px;
+  padding: 5px 15px;
+  outline: none;
+  border: 1px solid $button-border-color;
+  background: $button-bgcolor;
+  color: $main-color;
+  font-size: 1.5rem;
+  &:hover {
+    background: $button-hover-bgcolor;
+    color: $button-hover-textcolor;
+  }
+  &:active {
+    background: darken($button-hover-bgcolor, 10%);
+  }
+}
+
+#escape-instructions {
+  display: none;
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  margin-right: -100px;
+  text-align: center;
+}
+
+
+
+

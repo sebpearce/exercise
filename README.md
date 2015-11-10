@@ -1,6 +1,6 @@
 # Exercise timer
 
-Simple app that uses a looped timer to give you a hands-free tool for interval training.
+Simple app that uses a looped timer to give you a hands-free tool for interval training. See the live demo [here](http://sebpearce.com/exercise/).
 
 ([Interval training](https://en.wikipedia.org/wiki/Interval_training) is a form of exercising in which a short period of exercise, or "work," is followed by a short period of rest, and then repeated.)
 

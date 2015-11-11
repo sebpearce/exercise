@@ -1,39 +1,38 @@
 'use strict';
 
 
-var timer = {};
-
-timer.defaultValues = {
-  DEFAULT_WORK_PERIOD: 30,
-  DEFAULT_REST_PERIOD: 10,
-  DEFAULT_NUMBER_OF_SETS: 3,
-  DEFAULT_COUNTDOWN_SECONDS: 5,
-  DEFAULT_BGCOLOR: 'white',
-  DEFAULT_TEXT_COLOR: 'hsla(0,0%,0%,0.8)',
-  DEFAULT_WORK_BGCOLOR: 'white',
-  DEFAULT_REST_BGCOLOR: '#2CD48A',
-  DEFAULT_LAST_BGCOLOR: '#C23035',
-  DEFAULT_FINISHED_BGCOLOR: 'white',
-  // DEFAULT_FINISHED_BGCOLOR: '#4373AD',
-  DEFAULT_FADE_TIME: 500,
-};
-
-timer.interval = null;
-timer.workPeriod = timer.defaultValues.DEFAULT_WORK_PERIOD;
-timer.restPeriod = timer.defaultValues.DEFAULT_REST_PERIOD;
-timer.numberOfSets = timer.defaultValues.DEFAULT_NUMBER_OF_SETS;
-timer.queue = [];
-timer.queuePosition = 0;
-timer.countdownSeconds = timer.defaultValues.DEFAULT_COUNTDOWN_SECONDS;
-timer.sounds = {};
-timer.sounds.beep = new Audio('beep.wav');
-timer.sounds.work = new Audio('work.wav');
-timer.sounds.rest = new Audio('rest.wav');
-timer.sounds.countdown = new Audio('countdown.wav');
-timer.sounds.win = new Audio('applause.m4a');
-
-
 (function exerciseTimer(){
+
+  var timer = {};
+
+  timer.defaultValues = {
+    DEFAULT_WORK_PERIOD: 30,
+    DEFAULT_REST_PERIOD: 10,
+    DEFAULT_NUMBER_OF_SETS: 3,
+    DEFAULT_COUNTDOWN_SECONDS: 5,
+    DEFAULT_BGCOLOR: 'white',
+    DEFAULT_TEXT_COLOR: 'hsla(0,0%,0%,0.8)',
+    DEFAULT_WORK_BGCOLOR: 'white',
+    DEFAULT_REST_BGCOLOR: '#2CD48A',
+    DEFAULT_LAST_BGCOLOR: '#C23035',
+    DEFAULT_FINISHED_BGCOLOR: 'white',
+    // DEFAULT_FINISHED_BGCOLOR: '#4373AD',
+    DEFAULT_FADE_TIME: 500,
+  };
+
+  timer.interval = null;
+  timer.workPeriod = timer.defaultValues.DEFAULT_WORK_PERIOD;
+  timer.restPeriod = timer.defaultValues.DEFAULT_REST_PERIOD;
+  timer.numberOfSets = timer.defaultValues.DEFAULT_NUMBER_OF_SETS;
+  timer.queue = [];
+  timer.queuePosition = 0;
+  timer.countdownSeconds = timer.defaultValues.DEFAULT_COUNTDOWN_SECONDS;
+  timer.sounds = {};
+  timer.sounds.beep = new Audio('beep.wav');
+  timer.sounds.work = new Audio('work.wav');
+  timer.sounds.rest = new Audio('rest.wav');
+  timer.sounds.countdown = new Audio('countdown.wav');
+  timer.sounds.win = new Audio('applause.m4a');
 
   function leadingZero(time) {
     return (time < 10) ? "0" + time : + time;
